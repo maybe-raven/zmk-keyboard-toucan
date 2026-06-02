@@ -4,8 +4,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/outputs.h>
 
 #define BASE 0
 #define MODS 1
@@ -81,43 +81,62 @@
     base {
       display-name = "BASE";
       bindings = <
-&kp GRAVE  &kp Q  &kp W  &kp F  &kp P  &kp B  &kp J  &kp L  &kp U  &kp Y  &kp SEMI  &kp BSPC  &kp TAB  &hm GLOBE A  &hm LCTRL R  &hm LALT S  &hm LGUI T  &kp G  &kp M  &hm RGUI N  &hm RALT E  &hm RCTRL I  &hm GLOBE O  &kp ENTER  &caps_word  &kp Z  &kp X  &kp C  &kp D  &kp V  &kp K  &kp H  &kp COMMA  &kp DOT  &kp SQT  &to 1  &tm 1 ESC  &skq LSHFT  &kp SPACE  &key_repeat  &moto 2 2  &moto 3 3
+&kp GRAVE   &kp Q        &kp W        &kp F       &kp P       &kp B        &kp J        &kp L       &kp U       &kp Y        &kp SEMI     &kp BSPC
+&kp TAB     &hm GLOBE A  &hm LCTRL R  &hm LALT S  &hm LGUI T  &kp G        &kp M        &hm RGUI N  &hm RALT E  &hm RCTRL I  &hm GLOBE O  &kp ENTER
+&caps_word  &kp Z        &kp X        &kp C       &kp D       &kp V        &kp K        &kp H       &kp COMMA   &kp DOT      &kp SQT      &to 1
+                                      &tm 1 ESC   &skq LSHFT  &kp SPACE    &key_repeat  &moto 2 2   &moto 3 3
       >;
     };
 
     mods {
       display-name = "MODS";
       bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp GLOBE  &kp LCTRL  &kp LALT  &kp LGUI  &trans  &trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp GLOBE  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LSHIFT  &trans  &trans
+&trans  &trans     &trans     &trans    &trans    &trans    &trans      &trans    &trans    &trans     &trans     &trans
+&trans  &kp GLOBE  &kp LCTRL  &kp LALT  &kp LGUI  &trans    &trans      &kp LGUI  &kp LALT  &kp LCTRL  &kp GLOBE  &trans
+&trans  &trans     &trans     &trans    &trans    &trans    &trans      &trans    &trans    &trans     &trans     &trans
+                              &trans    &trans    &trans    &kp LSHIFT  &trans    &trans
       >;
     };
 
     num+symbols {
       display-name = "NSYM";
       bindings = <
-&trans  &trans  &kp N7  &kp N8  &kp N9  &kp MINUS  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp FSLH  &kp BSLH  &trans  &trans  &trans  &kp GRAVE  &kp N4  &kp N5  &kp N6  &kp EQUAL  &kp LBKT  &kp RBKT  &kp SQT  &kp SEMI  &kp ESC  &trans  &trans  &trans  &kp N1  &kp N2  &kp N3  &kp N0  &kp LESS_THAN  &kp GREATER_THAN  &kp COMMA  &kp DOT  &trans  &trans  &to 0  &trans  &trans  &trans  &none  &trans
+&trans  &trans     &kp N7  &kp N8  &kp N9  &kp MINUS    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp FSLH   &kp BSLH  &trans   &trans
+&trans  &kp GRAVE  &kp N4  &kp N5  &kp N6  &kp EQUAL    &kp LBKT              &kp RBKT               &kp SQT    &kp SEMI  &kp ESC  &trans
+&trans  &trans     &kp N1  &kp N2  &kp N3  &kp N0       &kp LESS_THAN         &kp GREATER_THAN       &kp COMMA  &kp DOT   &trans   &trans
+                           &to 0   &trans  &trans       &trans                &none                  &trans
       >;
     };
 
     nav+scrl {
       display-name = "NAV";
       bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &none  &to 4  &none  &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS  &kp C_AC_DESKTOP_SHOW_ALL_APPLICATIONS  &kp DELETE  &kp TAB  &kp GLOBE  &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHFT  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &to 5  &to 0  &kp CAPSLOCK  &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp HOME  &kp PG_DN  &kp PG_UP  &kp END  &kp C_AC_BACK  &kp C_AC_FORWARD  &to 0  &trans  &trans  &trans  &trans  &none
+&kp F1        &kp F2     &kp F3          &kp F4          &kp F5        &kp F6             &none     &to 4      &none      &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS  &kp C_AC_DESKTOP_SHOW_ALL_APPLICATIONS  &kp DELETE
+&kp TAB       &kp GLOBE  &kp LCTRL       &kp LALT        &kp LGUI      &kp LSHFT          &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT                          &to 5                                   &to 0
+&kp CAPSLOCK  &trans     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END                            &kp C_AC_BACK                           &kp C_AC_FORWARD
+                                         &to 0           &trans        &trans             &trans    &trans     &none
       >;
     };
 
     MOUSE {
       display-name = "MOS";
       bindings = <
-&kp GRAVE  &kp F2  &to F3  &to F4  &to F5  &to F6  &to 3  &none  &mmv MOVE_UP  &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS  &kp C_AC_DESKTOP_SHOW_ALL_APPLICATIONS  &kp DELETE  &kp TAB  &kp GLOBE  &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHFT  &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &to 5  &to 0  &kp CAPSLOCK  &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp HOME  &kp PG_DN  &kp PG_UP  &kp END  &kp C_AC_BACK  &kp C_AC_FORWARD  &to 0  &trans  &mkp LCLK  &mkp RCLK  &trans  &none
+&kp GRAVE     &kp F2     &to F3          &to F4          &to F5        &to F6             &to 3      &none           &mmv MOVE_UP    &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS  &kp C_AC_DESKTOP_SHOW_ALL_APPLICATIONS  &kp DELETE
+&kp TAB       &kp GLOBE  &kp LCTRL       &kp LALT        &kp LGUI      &kp LSHFT          &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT                    &to 5                                   &to 0
+&kp CAPSLOCK  &trans     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT    &kp HOME   &kp PG_DN       &kp PG_UP       &kp END                            &kp C_AC_BACK                           &kp C_AC_FORWARD
+                                         &to 0           &trans        &mkp LCLK          &mkp RCLK  &trans          &none
       >;
     };
 
     fn+media {
       display-name = "SYS";
       bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &out OUT_TOG  &kp GLOBE  &kp LCTRL  &kp LALT  &kp LGUI  &trans  &trans  &kp RGUI  &kp RALT  &kp RCTRL  &kp GLOBE  &to 0  &bt BT_CLR  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &kp K_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_PP  &kp C_NEXT  &to 0  &trans  &trans  &trans  &moto 2 2  &moto 3 3
+&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6          &kp F7      &kp F8        &kp F9        &kp F10     &kp F11    &kp F12
+&trans      &kp GLOBE     &kp LCTRL     &kp LALT      &kp LGUI      &trans          &trans      &kp RGUI      &kp RALT      &kp RCTRL   &kp GLOBE  &to 0
+&bt BT_CLR  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0    &kp K_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_PP   &kp C_NEXT
+                                        &to 0         &trans        &trans          &trans      &moto 2 2     &moto 3 3
       >;
     };
   };
 };
+
